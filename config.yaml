@@ -6,7 +6,12 @@ dotfiles:
   d_nvim:
     src: config/nvim
     dst: ~/.config/nvim
+  f_tmux.conf:
+    src: tmux.conf
+    dst: ~/.tmux.conf
+    chmod: '600'
 profiles:
   office:
     dotfiles:
     - d_nvim
+    - f_tmux.conf
