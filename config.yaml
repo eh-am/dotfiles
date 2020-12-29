@@ -15,3 +15,7 @@ profiles:
     dotfiles:
     - d_nvim
     - f_tmux.conf
+  gin:
+    dotfiles:
+    - d_nvim
+    - f_tmux.conf
