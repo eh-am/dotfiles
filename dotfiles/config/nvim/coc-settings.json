@@ -1,0 +1,25 @@
+{
+  "coc.preferences.formatOnSaveFiletypes": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "rust"
+  ],
+  "tsserver.formatOnType": true,
+  "tsserver.log": "verbose",
+  "coc.preferences.formatOnType": true,
+  "tsserver.trace.server": "verbose",
+  "tsserver.npm": "/usr/local/bin/npm",
+  "languageserver": {
+    "golang": {
+      "command": "bingo",
+      "args": ["--diagnostics-style=instant"],
+      "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
+      "filetypes": ["go"]
+    }
+  },
+  "python": {
+    "path": "python3"
+  }
+}

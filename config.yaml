@@ -1,0 +1,12 @@
+config:
+  backup: true
+  create: true
+  dotpath: dotfiles
+dotfiles:
+  d_nvim:
+    src: config/nvim
+    dst: ~/.config/nvim
+profiles:
+  office:
+    dotfiles:
+    - d_nvim
