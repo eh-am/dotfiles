@@ -10,12 +10,18 @@ dotfiles:
     src: tmux.conf
     dst: ~/.tmux.conf
     chmod: '600'
+  d_omf:
+    src: config/omf
+    dst: ~/.config/omf
+    chmod: '775'
 profiles:
   office:
     dotfiles:
     - d_nvim
     - f_tmux.conf
+    - d_omf
   gin:
     dotfiles:
     - d_nvim
     - f_tmux.conf
+    - d_omf
