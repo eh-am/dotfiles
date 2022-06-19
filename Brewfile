@@ -51,3 +51,4 @@ brew "boxes"
 brew "fortune"
 
 brew "fzf"
+brew "bat"

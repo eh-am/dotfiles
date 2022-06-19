@@ -47,4 +47,6 @@
         dest: "~/projects/picard-tips-fortune"
         clone: yes
         update: yes
+      register: picard_tips
     - ansible.builtin.command: strfile ~/projects/picard-tips-fortune/PicardTips.txt
+      when: picard_tips.changed
