@@ -1,3 +1,4 @@
+# vim: ft=yaml.ansible
 ---
 - name: Mac setup
   hosts: localhost
@@ -21,6 +22,22 @@
         key: KeyRepeat
         type: int
         value: 0
+        state: present
+
+    ### https://apple.stackexchange.com/questions/59556/is-there-a-way-to-completely-disable-dock
+    - name: "osx_defaults: Autohide dock"
+      community.general.osx_defaults:
+        domain: com.apple.dock
+        key: autohide
+        type: bool
+        value: true
+        state: present
+    - name: "osx_defaults: Autohide menu bar"
+      community.general.osx_defaults:
+        domain: com.apple.dock
+        key: mru-spaces
+        type: bool
+        value: false
         state: present
 
 

@@ -59,6 +59,8 @@ Plug 'airblade/vim-gitgutter' " Show git diff
 " Movement
 Plug 'unblevable/quick-scope'
 
+Plug 'pearofducks/ansible-vim'
+
 call plug#end()
 
 
