@@ -1,0 +1,36 @@
+{
+  "eslint.quiet": true,
+  "coc.preferences.formatOnType": false,
+  "tsserver.formatOnType": true,
+  "tsserver.npm": "/usr/bin/npm",
+  "tsserver.log": "verbose",
+  "tsserver.trace.server": "verbose",
+   "coc.preferences.formatOnSaveFiletypes": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+  "languageserver": {
+    "bash": {
+      "command": "bash-language-server",
+      "args": ["start"],
+      "filetypes": ["sh"]
+    },
+    "golang": {
+      "command": "bingo",
+      "args": ["--diagnostics-style=instant"],
+      "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
+      "filetypes": ["go"]
+    },
+    "terraform": {
+      "command": "terraform-ls",
+      "args": ["serve"],
+      "filetypes": [
+        "terraform",
+        "tf"
+      ],
+      "initializationOptions": {},
+      "settings": {}
+    }
+  },
+  "python": {
+    "path": "python3"
+  },
+  "clangd.path": "/home/eduardo/.config/coc/extensions/coc-clangd-data/install/12.0.0/clangd_12.0.0/bin/clangd"
+}
