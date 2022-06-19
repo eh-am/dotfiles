@@ -1,0 +1,21 @@
+#!/bin/sh
+
+set -x
+
+# install homebrew if it's missing
+if ! command -v brew >/dev/null 2>&1; then
+	echo "Installing homebrew"
+	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
+
+if [ -f "$HOME/Brewfile" ]; then
+	echo "Updating homebrew bundle"
+	brew bundle --file "$HOME/Brewfile"
+fi
+
+
+
+
+# Disable sound effects on boot
+#sudo nvram StartupMute=%01
+ansible-playbook -v "$HOME/.config/ansible/config.yml"

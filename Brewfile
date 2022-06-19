@@ -43,3 +43,11 @@ brew "librsvg"
 
 
 brew "starship"
+
+brew "ansible"
+
+# for fortune
+brew "boxes"
+brew "fortune"
+
+brew "fzf"

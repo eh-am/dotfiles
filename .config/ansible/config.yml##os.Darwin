@@ -1,0 +1,33 @@
+---
+- name: Mac setup
+  hosts: localhost
+  connection: local
+  gather_facts: false
+
+  vars:
+    ansible_python_interpreter: /usr/bin/python3
+  tasks:
+    - name: "osx_defaults: Decrease key repeat initial delay"
+      community.general.osx_defaults:
+        domain: NSGlobalDomain
+        key: InitialKeyRepeat
+        type: int
+        value: 0
+        state: present
+
+    - name: "osx_defaults: Decrease delay between key repeats"
+      community.general.osx_defaults:
+        domain: NSGlobalDomain
+        key: KeyRepeat
+        type: int
+        value: 0
+        state: present
+
+
+    - name: "Setup fortune"
+      git:
+        repo: https://github.com/eh-am/picard-tips-fortune.git
+        dest: "~/projects/picard-tips-fortune"
+        clone: yes
+        update: yes
+    - ansible.builtin.command: strfile ~/projects/picard-tips-fortune/PicardTips.txt
