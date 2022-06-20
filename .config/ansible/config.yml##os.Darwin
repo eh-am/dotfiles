@@ -57,19 +57,22 @@
         dest: "~/.tmux/plugins/tpm"
         clone: yes
         update: yes
-          #    - name: Install tmux plugins
-      #      ansible.builtin.command: ~/.tmux/plugins/tpm/scripts/install_plugins.sh
+
+    - name: Install tmux plugins
+      ansible.builtin.command: ~/.tmux/plugins/tpm/scripts/install_plugins.sh
 
     # https://apple.stackexchange.com/a/348520
-    #    - name: don't show recent apps in dock
-    #      ansible.built.command: defaults write com.apple.dock show-recents -bool no && defaults write com.apple.dock show-recents -bool no
-
+    - name: dont show recent apps in dock
+      ansible.builtin.shell: |
+        defaults write com.apple.dock show-recents -bool no
+        defaults write com.apple.dock recent-apps -array # intentionally empty
 
     # https://github.com/tmux/tmux/issues/2262
     - name: fix tmux256 color term
       ansible.builtin.shell: |
         # copied from
         # https://github.com/molawson/dotfiles/commit/e72c41dc8cc842eeb6698b285c84d6040e6073bf
+        # TODO(eh-am): have this file locally?
         curl -OL https://gist.githubusercontent.com/nicm/ea9cf3c93f22e0246ec858122d9abea1/raw/37ae29fc86e88b48dbc8a674478ad3e7a009f357/tmux-256color
         echo '8f259a31649900b9a8f71cbc28be762aa55206316d33d51fd8d08e4275b5f6a3  tmux-256color' | shasum -a 256 -c
 
