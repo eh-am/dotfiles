@@ -19,3 +19,4 @@ end
 # aliases
 alias vim=nvim
 alias cat=bat
+alias firefox="open -a firefox -n --args -p"

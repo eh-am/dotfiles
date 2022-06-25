@@ -52,3 +52,8 @@ brew "fortune"
 
 brew "fzf"
 brew "bat"
+
+cask "platypus"
+
+brew "lsusb"
+cask "bitwarden"
