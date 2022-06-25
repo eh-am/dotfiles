@@ -3,7 +3,18 @@ call plug#begin('~/.vim/plugged')
 Plug 'RyanMillerC/better-vim-tmux-resizer'
 Plug 'christoomey/vim-tmux-navigator'
 
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+let g:coc_global_extensions = [
+\ 'coc-eslint',
+\ 'coc-go',
+\ 'coc-html',
+\ 'coc-json',
+\ 'coc-pairs',
+\ 'coc-prettier',
+\ 'coc-snippets',
+\ 'coc-tsserver'
+\ ]
+
+Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': { -> coc#util#install() }}
 
 Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -12,7 +23,7 @@ Plug 'embear/vim-localvimrc'
 
 " Golang
 Plug 'buoto/gotests-vim'
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+" Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 Plug 'hashivim/vim-terraform'
 Plug 'juliosueiras/vim-terraform-completion'
@@ -112,3 +123,8 @@ source ~/.config/nvim/theme.vim
 source ~/.config/nvim/vimwiki.vim
 source ~/.config/nvim/nerdtree.vim
 source ~/.config/nvim/fzf.vim
+source ~/.config/nvim/coc-go.vim
+
+" scroll in docs
+" https://github.com/neoclide/coc.nvim/issues/1405#issuecomment-567841711
+set mouse=a

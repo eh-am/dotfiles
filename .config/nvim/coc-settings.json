@@ -5,7 +5,7 @@
   "tsserver.npm": "/usr/bin/npm",
   "tsserver.log": "verbose",
   "tsserver.trace.server": "verbose",
-   "coc.preferences.formatOnSaveFiletypes": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+   "coc.preferences.formatOnSaveFiletypes": ["javascript", "javascriptreact", "typescript", "typescriptreact", "go"],
   "languageserver": {
     "bash": {
       "command": "bash-language-server",
@@ -13,10 +13,12 @@
       "filetypes": ["sh"]
     },
     "golang": {
-      "command": "bingo",
-      "args": ["--diagnostics-style=instant"],
-      "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
-      "filetypes": ["go"]
+      "command": "gopls",
+      "rootPatterns": ["go.work", "go.mod", ".vim/", ".git/", ".hg/"],
+      "filetypes": ["go"],
+      "initializationOptions": {
+        "usePlaceholders": true
+      }
     },
     "terraform": {
       "command": "terraform-ls",
