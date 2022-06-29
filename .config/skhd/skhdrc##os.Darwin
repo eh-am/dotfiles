@@ -44,6 +44,9 @@ alt + shift - 0 : yabai -m window --space 10;
 alt - f : yabai -m window --toggle zoom-fullscreen
 alt + shift - f : yabai -m window --toggle native-fullscreen
 
+# go to the notes page, or back to where it was
+alt - u : sh -c '[[ $(yabai -m query --spaces --space | jq ".index") = "10" ]] && yabai -m space --focus recent || yabai -m space --focus 10'
+
 # kill container
 # TODO test this
 # problem with bellow is that it doesn't really kill the app

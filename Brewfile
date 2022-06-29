@@ -1,4 +1,5 @@
 brew "yabai"
+brew "jq"
 brew "koekeishiya/formulae/skhd"
 brew "spacebar"
 tap "homebrew/cask-fonts"
@@ -57,3 +58,27 @@ cask "platypus"
 
 brew "lsusb"
 cask "bitwarden"
+
+cask "transmission"
+
+cask "docker"
+tap "aws/tap"
+brew "aws-sam-cli"
+
+brew "ripgrep"
+cask "zoom"
+
+cask "wireshark"
+brew "hey"
+
+# for taking screenshots
+cask "kap"
+
+brew "bash-language-server"
+
+brew "tldr"
+brew "yt-dlp"
+brew "youtube-dl"
+
+cask "godot"
+

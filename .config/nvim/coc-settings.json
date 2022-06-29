@@ -31,6 +31,9 @@
       "settings": {}
     }
   },
+  "diagnostic-languageserver.filetypes": {
+    "sh": "shellcheck"
+  },
   "python": {
     "path": "python3"
   }
