@@ -1272,23 +1272,35 @@
         "options": {
           "full_name": "godot"
         }
+      },
+      "spotify": {
+        "version": "1.1.88.612,cc529952,10",
+        "options": {
+          "full_name": "spotify"
+        }
+      },
+      "hammerspoon": {
+        "version": "0.9.97",
+        "options": {
+          "full_name": "hammerspoon"
+        }
       }
     },
     "tap": {
       "homebrew/cask-fonts": {
-        "revision": "029a863b9f83d6bf15e124b97627853866da6e25"
+        "revision": "40ac7a64450f9827e0d748a6d78760fb078cd0b2"
       },
       "aws/tap": {
-        "revision": "a1479ba30ea060c6d977e5a19e759f803f9f042b"
+        "revision": "8bc7b0963aef69d2777f836cc9bda39c79a4763e"
       }
     }
   },
   "system": {
     "macos": {
       "monterey": {
-        "HOMEBREW_VERSION": "3.5.3-17-g74e933c",
+        "HOMEBREW_VERSION": "3.5.3-62-g0d6d390",
         "HOMEBREW_PREFIX": "/opt/homebrew",
-        "Homebrew/homebrew-core": "0c863ed6b6bf13f482dbee11180afd7e7ef22cdd",
+        "Homebrew/homebrew-core": "4ac9df16e89aef60dfe88bb0e97a672b8c8031dc",
         "CLT": "13.4.0.0.1.1651278267",
         "Xcode": "13.4.1",
         "macOS": "12.4"

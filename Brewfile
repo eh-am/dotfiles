@@ -6,6 +6,9 @@ tap "homebrew/cask-fonts"
 cask "homebrew/cask-fonts/font-fontawesome"
 brew "dmenu-mac"
 
+# stackline requires hammerspoon
+cask "hammerspoon"
+
 brew "fish"
 brew "tmux"
 
@@ -82,3 +85,4 @@ brew "youtube-dl"
 
 cask "godot"
 
+cask "spotify"

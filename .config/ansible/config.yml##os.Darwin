@@ -13,7 +13,7 @@
         domain: NSGlobalDomain
         key: InitialKeyRepeat
         type: int
-        value: 0
+        value: 14
         state: present
 
     - name: "osx_defaults: Decrease delay between key repeats"
@@ -21,7 +21,7 @@
         domain: NSGlobalDomain
         key: KeyRepeat
         type: int
-        value: 0
+        value: 2
         state: present
 
     ### https://apple.stackexchange.com/questions/59556/is-there-a-way-to-completely-disable-dock
@@ -85,3 +85,14 @@
         fi
         rm tmux-256color
         exit 0
+
+    # stackline setup
+    - name: hammerspoon default dir
+      ansible.builtin.shell: |
+        defaults write org.hammerspoon.Hammerspoon MJConfigFile "~/.config/hammerspoon/init.lua"
+    - name:
+      ansible.builtin.git:
+        repo: https://github.com/lkubb/stackline.git
+        dest: ~/.config/hammerspoon/stackline
+        version: d7a7b1d161207f69985ebc5add4988433a12b84a
+
