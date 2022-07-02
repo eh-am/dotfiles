@@ -20,3 +20,7 @@ end
 alias vim=nvim
 alias cat=bat
 alias firefox="open -a firefox -n --args -p"
+
+if status is-interactive
+  cd $HOME
+end
