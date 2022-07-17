@@ -14,7 +14,7 @@ config.appearance.iconPadding = 2
 -- c.appearance.offset.y = 0
 
 -- https://github.com/AdamWagner/stackline/issues/44#issuecomment-735340460
-config.features.fzyFrameDetect.enabled = false
+config.features.fzyFrameDetect.enabled = true
 config.features.fzyFrameDetect.fuzzFactor = 200
 
 

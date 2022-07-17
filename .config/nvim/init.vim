@@ -13,7 +13,8 @@ let g:coc_global_extensions = [
 \ 'coc-snippets',
 \ 'coc-tsserver',
 \ 'coc-diagnostic',
-\ 'coc-sh'
+\ 'coc-sh',
+\ 'coc-deno'
 \ ]
 
 Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': { -> coc#util#install() }}

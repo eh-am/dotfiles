@@ -86,3 +86,9 @@ brew "youtube-dl"
 cask "godot"
 
 cask "spotify"
+
+cask "vlc"
+
+brew "graphviz"
+
+cask "anki"
