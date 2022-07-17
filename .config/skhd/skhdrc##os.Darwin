@@ -55,14 +55,20 @@ alt - u : sh -c '[[ $(yabai -m query --spaces --space | jq ".index") = "10" ]] &
 # problem with bellow is that it doesn't really kill the app
 # alt + shift - q : yabai -m window --close
 # this one does
-alt + shift - q : skhd --key "cmd - w"
-alt - q : skhd --key "cmd - w"
+alt + shift - q : skhd --key "cmd - q"
+alt - q : skhd --key "cmd - q"
 
 # launch terminal with Enter
 alt - 0x24 : kitty
 
 # since i don't have dmenu...
-alt - d : open -a dmenu-mac
+alt - d : ~/bin/popup.sh ~/bin/launcher.sh
 
 
-ctrl - w : shkd --key "cmd - w"
+# Arrow Keys
+# https://github.com/koekeishiya/skhd/issues/1#issuecomment-956139649
+fn - h : skhd -k "left"
+fn - j : skhd -k "down"
+fn - k : skhd -k "up"
+fn - l : skhd -k "right"
+

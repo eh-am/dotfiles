@@ -4,7 +4,6 @@ brew "koekeishiya/formulae/skhd"
 brew "spacebar"
 tap "homebrew/cask-fonts"
 cask "homebrew/cask-fonts/font-fontawesome"
-brew "dmenu-mac"
 
 # stackline requires hammerspoon
 cask "hammerspoon"
@@ -29,25 +28,23 @@ brew "direnv"
 # tools
 brew "coreutils"
 
-
 # fonts
 tap "homebrew/cask-fonts"
 cask "font-jetbrains-mono"
 
 cask "slack"
 
-
+# Needed to build node-canvas?
 brew "pkg-config"
 brew "cairo"
-brew "pango" 
-brew "libpng" 
-brew "jpeg" 
+brew "pango"
+brew "libpng"
+brew "jpeg"
 brew "giflib"
 brew "librsvg"
 
 
 brew "starship"
-
 brew "ansible"
 
 # for fortune
@@ -74,8 +71,6 @@ cask "zoom"
 cask "wireshark"
 brew "hey"
 
-# for taking screenshots
-cask "kap"
 
 brew "bash-language-server"
 
@@ -84,11 +79,14 @@ brew "yt-dlp"
 brew "youtube-dl"
 
 cask "godot"
-
 cask "spotify"
-
 cask "vlc"
-
 brew "graphviz"
-
 cask "anki"
+
+cask "kap" # for taking screenshots
+cask "keycastr" # to display keystrokes
+brew "cmatrix" # aesthetics
+
+brew "ffmpeg"
+

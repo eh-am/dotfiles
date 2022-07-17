@@ -75,6 +75,8 @@ Plug 'unblevable/quick-scope'
 
 Plug 'pearofducks/ansible-vim'
 
+Plug 'bfontaine/Brewfile.vim'
+
 call plug#end()
 
 

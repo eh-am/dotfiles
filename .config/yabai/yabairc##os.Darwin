@@ -41,6 +41,7 @@ yabai -m config right_padding                0
 yabai -m config window_gap                   0
 
 yabai -m rule --add app="^System Preferences$" manage=off
+yabai -m rule --add title='mylauncher' manage=off sticky=on layer=above border=off
 
 
 #defaults write com.apple.dock autohide -bool true 
