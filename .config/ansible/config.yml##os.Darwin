@@ -106,3 +106,9 @@
     - ansible.builtin.pip:
         name: six
         executable: pip3
+
+    # https://apple.stackexchange.com/a/82084
+    #
+    - name: disable dock
+      ansible.builtin.shell: |
+        defaults write com.apple.dock autohide-delay -float 1000;
