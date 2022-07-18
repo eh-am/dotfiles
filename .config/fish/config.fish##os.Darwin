@@ -20,3 +20,6 @@ end
 alias vim=nvim
 alias cat=bat
 alias firefox="open -a firefox -n --args -p"
+
+set -g -x XDG_CONFIG_HOME $HOME/.config
+

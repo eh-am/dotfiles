@@ -90,3 +90,12 @@ brew "cmatrix" # aesthetics
 
 brew "ffmpeg"
 
+
+brew "syncthing"
+
+# taskwarrior
+brew "task"
+brew "taskd"
+brew "tasksh"
+
+brew "timewarrior"
