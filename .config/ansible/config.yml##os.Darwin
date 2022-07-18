@@ -96,3 +96,13 @@
         dest: ~/.config/hammerspoon/stackline
         version: d7a7b1d161207f69985ebc5add4988433a12b84a
 
+    # required for taskwiki
+    - ansible.builtin.pip:
+        name: pynvim
+        executable: pip3
+    - ansible.builtin.pip:
+        name: tasklib
+        executable: pip3
+    - ansible.builtin.pip:
+        name: six
+        executable: pip3

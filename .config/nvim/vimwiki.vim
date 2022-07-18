@@ -49,10 +49,6 @@ au BufNewFile ~/projects/vimwiki/work/diary/*.md :silent 0r !~/projects/vimwiki/
 "au BufRead,BufNewFile ~/projects/vimwiki/work/pyroscope/diary/*.md setlocal wrap linebreak textwidth=80
 
 
-let g:knowledge_srs_provider = "Anki"
-let g:knowledge_data_dir = "/home/eduardo/.local/share/Anki2/eduardo/collection.anki2"
-let g:knowledge_dir = "/home/eduardo/projects/vimwiki/Anki"
-
 
 " Don't set a swap file for vimwiki
 au BufNew,BufRead ~/projects/vimwiki/** setlocal noswapfile
