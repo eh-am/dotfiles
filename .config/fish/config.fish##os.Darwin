@@ -22,4 +22,8 @@ alias cat=bat
 alias firefox="open -a firefox -n --args -p"
 
 set -g -x XDG_CONFIG_HOME $HOME/.config
+set -g -x TIMEWARRIORDB $HOME/projects/vimwiki/timewarrior
 
+# to work with vimwiki
+# TODO
+alias date=gdate
