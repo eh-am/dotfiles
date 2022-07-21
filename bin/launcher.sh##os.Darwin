@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+# original idea:
+# https://github.com/knazarov/dotfiles/blob/eaa58294735f1048c4ada0060b8827c34391a5e8/bin/launcher.sh
+
+# TODO: would be nice to overwrite certain apps, for example in firefox I always want to launch with a profile
+# Also it would be nice to allow running scripts
+
+# use tiebreak=index so that we prefer my scripts (~/Applications)
+find \
+  ~/Applications \
+  /Applications \
+  /System/Applications \
+  /System/Library/CoreServices \
+  /System/Applications/Utilities \
+  -maxdepth 1 -name "*.app" | \
+  fzf --tiebreak=index | xargs -I {} open "{}"
+
