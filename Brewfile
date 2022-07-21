@@ -99,3 +99,6 @@ brew "taskd"
 brew "tasksh"
 
 brew "timewarrior"
+
+# only used with timewarrior-status.sh
+brew "gnu-sed"

@@ -1,8 +1,12 @@
 #!/usr/bin/env sh
 
+spacebar -m config title                       off
+
+# it seems we need to give as much space between setting up and enabling as possible
+spacebar -m config center_shell_command         "/Users/eduardo/bin/timewarrior-status.sh"
+
 spacebar -m config position                    top
 spacebar -m config height                      32
-spacebar -m config title                       off
 spacebar -m config spaces                      on
 spacebar -m config clock                       on
 spacebar -m config power                       on
@@ -28,8 +32,8 @@ spacebar -m config clock_icon                  
 spacebar -m config dnd_icon                    
 spacebar -m config clock_format                "%d/%m/%y %R"
 spacebar -m config right_shell                 off
-spacebar -m config right_shell_icon            
-spacebar -m config right_shell_command         "whoami"
+
+spacebar -m config center_shell         on
+
 
 echo "spacebar configuration loaded.."
-
