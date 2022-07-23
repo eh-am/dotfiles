@@ -14,7 +14,8 @@ let g:coc_global_extensions = [
 \ 'coc-tsserver',
 \ 'coc-diagnostic',
 \ 'coc-sh',
-\ 'coc-deno'
+\ 'coc-deno',
+\ 'coc-lua'
 \ ]
 
 Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': { -> coc#util#install() }}
@@ -26,7 +27,7 @@ Plug 'embear/vim-localvimrc'
 
 " Golang
 Plug 'buoto/gotests-vim'
-" Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 Plug 'hashivim/vim-terraform'
 Plug 'juliosueiras/vim-terraform-completion'
