@@ -13,7 +13,14 @@ starship init fish | source
 
 
 function fish_greeting
- fortune ~/projects/picard-tips-fortune/ | fold -s -w80 | boxes -d stone -a c
+   # since tmux doesn't support images
+   # https://github.com/kovidgoyal/kitty/issues/413
+   # let's not run fortune with image there
+   if [ "$TERM" = "xterm-kitty" ];
+     ~/bin/picard-fortune.sh
+    read -p ""
+    clear
+   end
 end
 
 # aliases
@@ -27,3 +34,4 @@ set -g -x TIMEWARRIORDB $HOME/projects/vimwiki/timewarrior
 # to work with vimwiki
 # TODO
 alias date=gdate
+alias icat="kitty +kitten icat"
