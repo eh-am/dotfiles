@@ -59,7 +59,9 @@ alt + shift - q : skhd --key "cmd - q"
 alt - q : skhd --key "cmd - q"
 
 # launch terminal with Enter
-alt - 0x24 : kitty
+# launch a single instance (faster)
+# https://gist.github.com/ctrlcctrlv/978b3ee4f55d4b4ec415a985e01cb1c9?permalink_comment_id=3976585#gistcomment-3976585
+alt - 0x24 : kitty -1
 
 # since i don't have dmenu...
 alt - d : ~/bin/popup.sh ~/bin/launcher.sh
