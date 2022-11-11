@@ -1,4 +1,5 @@
-alt - e : yabai -m space --layout bsp
+# previously it was alt - e, but that's used for acute character
+alt - b : yabai -m space --layout bsp
 alt - s : yabai -m space --layout stack
 
 # focus windows

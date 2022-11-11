@@ -112,3 +112,13 @@
     - name: disable dock
       ansible.builtin.shell: |
         defaults write com.apple.dock autohide-delay -float 1000;
+
+    - name: clone powerline fonts
+      ansible.builtin.git:
+        repo: https://github.com/powerline/fonts.git
+        dest: ~/projects/powerline-fonts
+        version: e80e3eba9091dac0655a0a77472e10f53e754bb0
+    - name: install powerline fonts
+      ansible.builtin.shell: |
+        ~/projects/powerline-fonts/install.sh
+        

@@ -85,6 +85,7 @@ brew "graphviz"
 cask "anki"
 
 cask "kap" # for taking screenshots
+cask "loom"
 cask "keycastr" # to display keystrokes
 brew "cmatrix" # aesthetics
 
@@ -102,3 +103,47 @@ brew "timewarrior"
 
 # only used with timewarrior-status.sh
 brew "gnu-sed"
+
+# https://github.com/Homebrew/discussions/discussions/285
+tap "carlocab/personal"
+brew "carlocab/personal/unrar"
+
+# to use with icat
+brew "imagemagick"
+
+# docker server replacement
+brew "colima"
+
+brew "act" # to test github actoins locally
+
+cask "ngrok"
+
+cask "visual-studio-code"
+
+brew "rename"
+
+cask "obs"
+cask "audacity"
+
+brew "nicotine-plus"
+
+brew "kind"
+
+cask "syncthing"
+
+# https://gist.github.com/7468696e6b/ec8fa5d6cdb4e80633b9df95869b70c0
+tap "kde-mac/kde", "https://invent.kde.org/packaging/homebrew-kde.git"
+#brew "okular"
+cask "gimp"
+
+brew "wget"
+
+# photos
+cask "darktable"
+
+brew "nginx"
+
+brew "trash"
+
+brew "git"
+brew "protobuf"
