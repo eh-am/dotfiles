@@ -47,6 +47,10 @@ brew "librsvg"
 brew "starship"
 brew "ansible"
 
+# Required for ansible
+tap "esolitos/ipa"
+brew "esolitos/ipa/sshpass"
+
 # for fortune
 brew "boxes"
 brew "fortune"
@@ -85,6 +89,7 @@ brew "graphviz"
 cask "anki"
 
 cask "kap" # for taking screenshots
+cask "licecap" # taking screenshots since kap is not working
 cask "loom"
 cask "keycastr" # to display keystrokes
 brew "cmatrix" # aesthetics
@@ -147,3 +152,6 @@ brew "trash"
 
 brew "git"
 brew "protobuf"
+
+
+cask "keyboardcleantool"

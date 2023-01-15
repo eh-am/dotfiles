@@ -12,16 +12,16 @@ fish_vi_key_bindings
 starship init fish | source
 
 
-function fish_greeting
-   # since tmux doesn't support images
-   # https://github.com/kovidgoyal/kitty/issues/413
-   # let's not run fortune with image there
-   if [ "$TERM" = "xterm-kitty" ];
-     ~/bin/picard-fortune.sh
-    read -p ""
-    clear
-   end
-end
+#function fish_greeting
+#   # since tmux doesn't support images
+#   # https://github.com/kovidgoyal/kitty/issues/413
+#   # let's not run fortune with image there
+#   if [ "$TERM" = "xterm-kitty" ];
+#     ~/bin/picard-fortune.sh
+#    read -p ""
+#    clear
+#   end
+#end
 
 # aliases
 alias vim=nvim
@@ -35,3 +35,4 @@ set -g -x TIMEWARRIORDB $HOME/projects/vimwiki/timewarrior
 # TODO
 alias date=gdate
 alias icat="kitty +kitten icat"
+alias tmux-blog="tmux new -s blog -c ~/projects/eh-am.github.io \; split-window make \; detach-client && tmux attach -t blog"
