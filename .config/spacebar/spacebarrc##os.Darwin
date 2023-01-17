@@ -6,6 +6,7 @@ spacebar -m config title                       off
 spacebar -m config center_shell_command         "/Users/eduardo/bin/timewarrior-status.sh"
 
 spacebar -m config position                    top
+# Same height as the menu bar
 spacebar -m config height                      32
 spacebar -m config spaces                      on
 spacebar -m config clock                       on
@@ -33,7 +34,7 @@ spacebar -m config dnd_icon                    
 spacebar -m config clock_format                "%d/%m/%y %R"
 spacebar -m config right_shell                 off
 
-spacebar -m config center_shell         on
+spacebar -m config center_shell         off
 
 
 echo "spacebar configuration loaded.."
