@@ -15,7 +15,8 @@ let g:coc_global_extensions = [
 \ 'coc-diagnostic',
 \ 'coc-sh',
 \ 'coc-deno',
-\ 'coc-lua'
+\ 'coc-lua',
+\ 'coc-clangd'
 \ ]
 
 Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': { -> coc#util#install() }}

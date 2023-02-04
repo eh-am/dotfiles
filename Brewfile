@@ -155,3 +155,12 @@ brew "protobuf"
 
 
 cask "keyboardcleantool"
+
+# To delete files in a git repo
+brew "git-filter-repo"
+
+brew "ncdu"
+
+cask "launchcontrol"
+
+brew "rsync"

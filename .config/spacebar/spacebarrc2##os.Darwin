@@ -13,11 +13,11 @@ spacebar -m config power                       off
 spacebar -m config text_font                   "Helvetica Neue:Bold:12.0"
 spacebar -m config background_color            0xff000000
 spacebar -m config foreground_color            0xffa8a8a8
-spacebar -m config right_shell                 on
-
-spacebar -m config right_shell_command         "/Users/eduardo/bin/timewarrior-status.sh"
 spacebar -m config center_shell         off
-spacebar -m config right_shell_icon ""
+
+spacebar -m config right_shell                 on
+spacebar -m config right_shell_icon            " "
+spacebar -m config right_shell_command         "/Users/eduardo/bin/timewarrior-status.sh"
 
 
 echo "spacebar configuration loaded.."
