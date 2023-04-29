@@ -34,6 +34,8 @@ cask "font-jetbrains-mono"
 
 cask "slack"
 
+cask "whatsapp"
+
 # Needed to build node-canvas?
 brew "pkg-config"
 brew "cairo"
@@ -164,3 +166,7 @@ brew "ncdu"
 cask "launchcontrol"
 
 brew "rsync"
+
+brew "git-lfs"
+
+brew "htop"

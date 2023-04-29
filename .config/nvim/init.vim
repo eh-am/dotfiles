@@ -127,9 +127,13 @@ vnoremap // y/\V<C-R>=escape(@",'/\')<CR><CR>
 " zg to add word to vocabulary
 autocmd FileType markdown setlocal spell
 autocmd FileType gitcommit setlocal spell
+
+autocmd FileType markdown setlocal spelllang=pt,en_us,cjk
 " Enable dictionary auto-completion in Markdown files and Git Commit Messages
+autocmd FileType markdown setlocal spellsuggest=best,9
+
 autocmd FileType markdown setlocal complete+=kspell
-autocmd FileType gitcommit setlocal complete+=kspell
+"autocmd FileType gitcommit setlocal complete+=kspell
 
 source ~/.config/nvim/coc.vim
 source ~/.config/nvim/theme.vim
