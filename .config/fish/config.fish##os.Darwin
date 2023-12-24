@@ -36,3 +36,8 @@ set -g -x TIMEWARRIORDB $HOME/projects/vimwiki/timewarrior
 alias date=gdate
 alias icat="kitty +kitten icat"
 alias tmux-blog="tmux new -s blog -c ~/projects/eh-am.github.io \; split-window make \; detach-client && tmux attach -t blog"
+
+set -x LESSOPEN "|/opt/homebrew/bin/lesspipe.sh %s"
+
+# used in building git's book
+alias inflate='ruby -r zlib -e "STDOUT.write Zlib::Inflate.inflate(STDIN.read)"'

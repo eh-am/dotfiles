@@ -11,8 +11,8 @@ TITLE=mylauncher
 # So I am letting it hardcoded for now
 #SCREEN_WIDTH=`yabai -m query --displays --display | jq .frame.w*2`
 #SCREEN_HEIGHT=`yabai -m query --displays --display | jq .frame.h*2`
-SCREEN_WIDTH=2560
-SCREEN_HEIGHT=1600
+SCREEN_WIDTH=3024
+SCREEN_HEIGHT=1964
 
 TERM_WIDTH=1280
 TERM_HEIGHT=1260

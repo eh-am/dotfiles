@@ -160,3 +160,6 @@ nmap <Leader>dk <Plug>VimspectorRestart
 nmap <Leader>dh <Plug>VimspectorStepOut
 nmap <Leader>dl <Plug>VimspectorStepInto
 nmap <Leader>dj <Plug>VimspectorStepOver
+
+" https://vim.fandom.com/wiki/Search_for_visually_selected_text#Readable_equivalent
+vnoremap // y/\V<C-R>=escape(@",'/\')<CR><CR>

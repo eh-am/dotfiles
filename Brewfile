@@ -92,11 +92,12 @@ cask "anki"
 
 cask "kap" # for taking screenshots
 cask "licecap" # taking screenshots since kap is not working
-cask "loom"
+#cask "loom"
 cask "keycastr" # to display keystrokes
 brew "cmatrix" # aesthetics
 
 brew "ffmpeg"
+brew "libtiff" # needed when merging audio + video from reddit
 
 
 brew "syncthing"
@@ -170,3 +171,49 @@ brew "rsync"
 brew "git-lfs"
 
 brew "htop"
+
+# needed for grafana stuff
+brew "mage"
+
+cask "discord"
+
+tap "norwoodj/tap"
+brew "helm-docs"
+
+# pdf reader
+# TODO: uninstall
+#tap "zegervdv/zathura"
+#brew "zathura"
+brew "lesspipe"
+cask "sioyek"
+
+brew "aichat"
+
+# backup
+cask "duplicati"
+
+# doesn't work with m1, need to install manually
+#cask "virtualbox"
+cask "vagrant"
+brew "qemu"
+# https://github.com/hashicorp/vagrant/issues/10644#issuecomment-1690022359
+cask "vagrant-vmware-utility"
+
+# steam deck
+# didn't work
+# curl: (22) The requested URL returned error: 404
+#Error: Download failed on Cask 'kdeconnect' with message: Download failed: https://binary-factory.kde.org/view/MacOS/job/kdeconnect-kde_Release_macos/lastStableBuild/artifact/kdeconnect-kde--macos-64-clang.dmg
+#cask "kde-mac/kde/kdeconnect"
+
+# https://courses.pikuma.com/courses/take/game-physics-engine-programming/lessons/28513490-technologies-dependencies
+brew "sdl2"
+brew "sdl2_image"
+brew "sdl2_gfx"
+
+# https://old.reddit.com/r/vim/comments/iz4io9/how_would_i_go_about_linking_external_libraries/g6h1kui/
+brew "bear"
+
+# to be able to read markdown files locally
+brew "mdcat"
+cask "mark-text"
+cask "obsidian"
