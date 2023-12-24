@@ -135,6 +135,10 @@ autocmd FileType markdown setlocal spellsuggest=best,9
 autocmd FileType markdown setlocal complete+=kspell
 "autocmd FileType gitcommit setlocal complete+=kspell
 
+" tell which python version to use https://stackoverflow.com/questions/59651964/neovim-vim-showing-wrong-python-version
+" so that we can use with vimwiki
+let g:python3_host_prog = expand('/opt/homebrew/bin/python3')
+
 source ~/.config/nvim/coc.vim
 source ~/.config/nvim/theme.vim
 source ~/.config/nvim/vimwiki.vim
