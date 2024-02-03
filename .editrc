@@ -1,0 +1,2 @@
+# https://stackoverflow.com/questions/6636124/how-do-i-make-vi-editing-mode-work-in-irb-when-using-rvm
+bind -v
