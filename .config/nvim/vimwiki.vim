@@ -35,14 +35,16 @@ function TaskSearch()
 endfunction
 command! TaskSearch :call TaskSearch()
 
-au BufNewFile ~/projects/vimwiki/life/tasks/*.md :silent 0r !~/projects/vimwiki/templates/task.sh '%'
+" Disabled this when migrated to obsidian
+" reasoning is that takswarrior/taskwiki doesn't work properly
+"au BufNewFile ~/projects/vimwiki/life/tasks/*.md :silent 0r !~/projects/vimwiki/templates/task.sh '%'
 " For some reason I couldn't concatenate
 " so i just hardcoded for now
 " but ideally we would use work_wiki.path
-au BufNewFile ~/projects/vimwiki/work/tasks/*.md :silent 0r !~/projects/vimwiki/templates/task.sh '%'
+"au BufNewFile ~/projects/vimwiki/work/tasks/*.md :silent 0r !~/projects/vimwiki/templates/task.sh '%'
 
-au BufNewFile ~/projects/vimwiki/life/diary/*.md :silent 0r !~/projects/vimwiki/templates/diary-life.sh 'life'
-au BufNewFile ~/projects/vimwiki/work/diary/*.md :silent 0r !~/projects/vimwiki/templates/diary.sh 'work'
+"au BufNewFile ~/projects/vimwiki/life/diary/*.md :silent 0r !~/projects/vimwiki/templates/diary-life.sh 'life'
+"au BufNewFile ~/projects/vimwiki/work/diary/*.md :silent 0r !~/projects/vimwiki/templates/diary.sh 'work'
 "au BufRead,BufNewFile ~/projects/vimwiki/work/diary/*.md setlocal wrap linebreak textwidth=80
 
 "au BufRead,BufNewFile ~/projects/vimwiki/life/diary/*.md setlocal wrap linebreak textwidth=80

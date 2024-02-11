@@ -5,10 +5,24 @@
 #
 # for this to work you must configure sudo such that
 # it will be able to run the command without password
-
 sudo yabai --load-sa
 yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
 
+
+# https://d12frosted.io/posts/2022-04-23-yabai-spaces.html
+function setup_space {
+  local idx="$1"
+  local name="$2"
+  local space=
+  echo "setup space $idx : $name"
+
+  space=$(yabai -m query --spaces --space "$idx")
+  if [ -z "$space" ]; then
+    yabai -m space --create
+  fi
+
+  yabai -m space "$idx" --label "$name"
+}
 
 # copied from https://github.com/koekeishiya/yabai/blob/master/examples/yabairc
 # global settings
@@ -16,15 +30,15 @@ yabai -m config mouse_follows_focus          off
 yabai -m config focus_follows_mouse          off
 yabai -m config window_origin_display        default
 yabai -m config window_placement             second_child
-yabai -m config window_topmost               off
+#yabai -m config window_topmost               off
 yabai -m config window_shadow                off
 yabai -m config window_opacity               off
 yabai -m config window_opacity_duration      0.0
 yabai -m config active_window_opacity        1.0
 yabai -m config normal_window_opacity        0.90
-yabai -m config window_border                on
-yabai -m config window_border_width          2
-yabai -m config active_window_border_color   0xffffaf00
+#yabai -m config window_border                on
+#yabai -m config window_border_width          2
+#yabai -m config active_window_border_color   0xffffaf00
 yabai -m config split_ratio                  0.50
 yabai -m config auto_balance                 off
 yabai -m config mouse_modifier               fn
@@ -34,15 +48,26 @@ yabai -m config mouse_drop_action            swap
 
 # general space settings
 yabai -m config layout                       bsp
-yabai -m config top_padding                  0
-yabai -m config bottom_padding               0
+yabai -m config top_padding                  10
+yabai -m config bottom_padding               10
 yabai -m config left_padding                 0
-yabai -m config right_padding                0
-yabai -m config window_gap                   0
+yabai -m config right_padding                5
+yabai -m config window_gap                   5
+
+# modify window shadows (default: on, options: on, off, float)
+# example: show shadows only for floating windows
+yabai -m config window_shadow float
+
+# window opacity (default: off)
+# example: render all unfocused windows with 90% opacity
+#yabai -m config window_opacity on
+#yabai -m config active_window_opacity 1.0
+#yabai -m config normal_window_opacity 0.90
 
 yabai -m rule --add app="^System Preferences$" manage=off
 yabai -m rule --add app="^darktable$" manage=off
-yabai -m rule --add title='mylauncher' manage=off sticky=on layer=above border=off
+# launches with ctrl+d
+yabai -m rule --add title='mylauncher' manage=off sticky=on layer=above
 
 
 #defaults write com.apple.dock autohide -bool true 
@@ -52,12 +77,20 @@ yabai -m rule --add title='mylauncher' manage=off sticky=on layer=above border=o
 
 # Hardcode a value
 # otherwise yabai will depend on spacebar
-#SPACEBAR_HEIGHT=$(spacebar -m config height)
-#yabai -m config external_bar all:$SPACEBAR_HEIGHT:0
-#yabai -m config external_bar main:-30:0
-#SPACEBAR_HEIGHT=$(spacebar -m config height)
-yabai -m config external_bar all:0:18
+#yabai -m config external_bar all:0:20
+# Turning off for now
+yabai -m config external_bar all:0:0
 
 yabai -m signal --add event=window_created action="~/.config/yabai/refresh.sh"
 yabai -m signal --add event=window_destroyed action="~/.config/yabai/refresh.sh"
 
+setup_space 9 music
+setup_space 10 notes
+
+yabai -m rule --add app="^Spotify$" space=9
+yabai -m rule --add app="^Obsidian$" space=10
+
+# yabai stopped supporting borders
+# so we have to rely on a third party
+# https://github.com/koekeishiya/yabai/issues/1889#issuecomment-1791066779
+borders active_color=0xffffaf00 inactive_color=0xff494d64 width=5.0

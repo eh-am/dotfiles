@@ -1,11 +1,10 @@
 {
   "eslint.quiet": true,
   "coc.preferences.formatOnType": false,
-  "tsserver.formatOnType": true,
+  "tsserver.formatOnType": false,
   "tsserver.npm": "/usr/bin/npm",
-  "tsserver.log": "verbose",
-  "tsserver.trace.server": "verbose",
-   "coc.preferences.formatOnSaveFiletypes": ["javascript", "javascriptreact", "typescript", "typescriptreact", "go"],
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "coc.preferences.formatOnSaveFiletypes": ["javascript", "javascriptreact", "typescript", "typescriptreact", "go"],
   "languageserver": {
     "bash": {
       "command": "bash-language-server",

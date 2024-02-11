@@ -67,3 +67,9 @@ command hypothesis composite get_current_url | js -p tri.excmds.open("https://vi
 " unbind h since it's used by hypothesis
 unbind --mode=visual h
 unbind a
+
+" Open current URL in private, useful for stuff like medium
+command private composite get_current_url |  winopen -private
+
+" Use my paywall bypasser service
+command paywall composite get_current_url | js -p tri.excmds.open("https://paywall.eduardoaleixo.com/submit?url=" + JS_ARG)

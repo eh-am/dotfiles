@@ -217,3 +217,11 @@ brew "bear"
 brew "mdcat"
 cask "mark-text"
 cask "obsidian"
+
+cask "electron"
+
+cask "adobe-creative-cloud"
+
+# https://github.com/koekeishiya/yabai/issues/1889#issuecomment-1791066779
+tap "FelixKratz/formulae"
+brew "borders"

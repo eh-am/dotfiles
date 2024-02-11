@@ -39,7 +39,7 @@ Plug 'junegunn/fzf.vim'
 " Vimwiki and friends
 Plug 'vimwiki/vimwiki', { 'branch': 'dev' }
 " Plug 'tools-life/taskwiki'
-Plug 'eh-am/taskwiki', { 'branch': 'call-TaskSearch-when-hitting-return' }
+"Plug 'eh-am/taskwiki', { 'branch': 'call-TaskSearch-when-hitting-return' }
 Plug 'mattn/calendar-vim'
 " Plug 'tbabej/knowledge'
 Plug 'junegunn/goyo.vim' "distraction free writing

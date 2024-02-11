@@ -7,7 +7,7 @@ spacebar -m config center_shell_command         "/Users/eduardo/bin/timewarrior-
 
 spacebar -m config position                    top
 # Same height as the menu bar
-spacebar -m config height                      32
+spacebar -m config height                      37
 spacebar -m config spaces                      on
 spacebar -m config clock                       on
 spacebar -m config power                       on
