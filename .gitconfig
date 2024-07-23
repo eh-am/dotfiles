@@ -1,0 +1,14 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+	name = Eduardo Aleixo
+	email = eduardoaleixomartins@gmail.com
+
+[includeIf "gitdir:~/work/carpa-dev/"]
+    path = ~/work/carpa-dev/.gitconfig
+
+[merge]
+	commit = no
+	ff = no
+[url "git@github.com:"]
+	insteadOf = https://github.com/
