@@ -137,11 +137,11 @@ autocmd FileType markdown setlocal complete+=kspell
 
 " tell which python version to use https://stackoverflow.com/questions/59651964/neovim-vim-showing-wrong-python-version
 " so that we can use with vimwiki
-let g:python3_host_prog = expand('/opt/homebrew/bin/python3')
+"let g:python3_host_prog = expand('/opt/homebrew/bin/python3')
 
 source ~/.config/nvim/coc.vim
 source ~/.config/nvim/theme.vim
-source ~/.config/nvim/vimwiki.vim
+"source ~/.config/nvim/vimwiki.vim
 source ~/.config/nvim/nerdtree.vim
 source ~/.config/nvim/fzf.vim
 source ~/.config/nvim/coc-go.vim

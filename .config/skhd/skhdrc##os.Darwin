@@ -1,6 +1,10 @@
 # previously it was alt - e, but that's used for acute character
 alt - b : yabai -m space --layout bsp
 alt - s : yabai -m space --layout stack
+# use skhd -o to figure out the keycode
+# TODO: damn mac uses that key for
+# 0x32 = `
+#alt - 0x32 : yabai -m window --toggle float
 
 # focus windows
 # for j and k, allow walking the stack (https://github.com/koekeishiya/yabai/issues/203#issuecomment-682086176)

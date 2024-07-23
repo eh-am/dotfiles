@@ -96,6 +96,8 @@ cask "licecap" # taking screenshots since kap is not working
 cask "keycastr" # to display keystrokes
 brew "cmatrix" # aesthetics
 
+# https://github.com/audacity/audacity/issues/3747#issuecomment-2099741598
+brew "ffmpeg@6"
 brew "ffmpeg"
 brew "libtiff" # needed when merging audio + video from reddit
 
@@ -118,6 +120,7 @@ brew "carlocab/personal/unrar"
 
 # to use with icat
 brew "imagemagick"
+brew "optipng"
 
 # docker server replacement
 brew "colima"
@@ -225,3 +228,9 @@ cask "adobe-creative-cloud"
 # https://github.com/koekeishiya/yabai/issues/1889#issuecomment-1791066779
 tap "FelixKratz/formulae"
 brew "borders"
+
+brew "npm"
+
+
+# for nvim 
+brew "pipx"

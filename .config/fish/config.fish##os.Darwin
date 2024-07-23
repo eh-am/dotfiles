@@ -41,3 +41,12 @@ set -x LESSOPEN "|/opt/homebrew/bin/lesspipe.sh %s"
 
 # used in building git's book
 alias inflate='ruby -r zlib -e "STDOUT.write Zlib::Inflate.inflate(STDIN.read)"'
+
+# https://github.com/asdf-community/asdf-golang
+source ~/.asdf/plugins/golang/set-env.fish
+
+# for some reason it was being overwriten by homebrew :(
+fish_add_path -m ~/.asdf/shims
+
+# Created by `pipx` on 2024-06-14 11:41:43
+set PATH $PATH /Users/eduardo/.local/bin

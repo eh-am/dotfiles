@@ -66,8 +66,12 @@ yabai -m config window_shadow float
 
 yabai -m rule --add app="^System Preferences$" manage=off
 yabai -m rule --add app="^darktable$" manage=off
+yabai -m rule --add app="^app$" manage=off
+
 # launches with ctrl+d
-yabai -m rule --add title='mylauncher' manage=off sticky=on layer=above
+#yabai -m rule --add title='mylauncher' manage=off sticky=on layer=above
+yabai -m rule --add title='mylauncher' manage=off sticky=on
+yabai -m rule --add app="^reMarkable$" manage=on
 
 
 #defaults write com.apple.dock autohide -bool true 
@@ -77,9 +81,7 @@ yabai -m rule --add title='mylauncher' manage=off sticky=on layer=above
 
 # Hardcode a value
 # otherwise yabai will depend on spacebar
-#yabai -m config external_bar all:0:20
-# Turning off for now
-yabai -m config external_bar all:0:0
+yabai -m config external_bar all:20:20
 
 yabai -m signal --add event=window_created action="~/.config/yabai/refresh.sh"
 yabai -m signal --add event=window_destroyed action="~/.config/yabai/refresh.sh"
@@ -94,3 +96,7 @@ yabai -m rule --add app="^Obsidian$" space=10
 # so we have to rely on a third party
 # https://github.com/koekeishiya/yabai/issues/1889#issuecomment-1791066779
 borders active_color=0xffffaf00 inactive_color=0xff494d64 width=5.0
+
+# Manage remarkable
+# https://github.com/koekeishiya/yabai/issues/2046
+yabai -m rule --add app="reMarkable" role="AXWindow" subrole="AXDialog" manage=on
