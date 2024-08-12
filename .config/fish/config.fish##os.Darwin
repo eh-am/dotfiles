@@ -50,3 +50,5 @@ fish_add_path -m ~/.asdf/shims
 
 # Created by `pipx` on 2024-06-14 11:41:43
 set PATH $PATH /Users/eduardo/.local/bin
+
+defaults write -g NSUserKeyEquivalents -dict-add 'Minimize' '\0'

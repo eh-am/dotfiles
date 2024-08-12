@@ -27,7 +27,8 @@ function setup_space {
 # copied from https://github.com/koekeishiya/yabai/blob/master/examples/yabairc
 # global settings
 yabai -m config mouse_follows_focus          off
-yabai -m config focus_follows_mouse          off
+# when using two monitors it's useful to just move it
+yabai -m config focus_follows_mouse          autofocus
 yabai -m config window_origin_display        default
 yabai -m config window_placement             second_child
 #yabai -m config window_topmost               off
@@ -100,3 +101,6 @@ borders active_color=0xffffaf00 inactive_color=0xff494d64 width=5.0
 # Manage remarkable
 # https://github.com/koekeishiya/yabai/issues/2046
 yabai -m rule --add app="reMarkable" role="AXWindow" subrole="AXDialog" manage=on
+
+# leave blender preferences as a floating window
+yabai -m rule --add app="Blender" role="AXWindow" title="Blender Preferences" manage=off

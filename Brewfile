@@ -234,3 +234,9 @@ brew "npm"
 
 # for nvim 
 brew "pipx"
+
+# port scan, trying to figure out what the rpi ip address
+brew "nmap"
+
+
+cask "blender"
