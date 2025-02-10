@@ -50,7 +50,7 @@ yabai -m config mouse_drop_action            swap
 
 # general space settings
 yabai -m config layout                       bsp
-yabai -m config top_padding                  10
+yabai -m config top_padding                  12
 yabai -m config bottom_padding               10
 yabai -m config left_padding                 1
 yabai -m config right_padding                5
@@ -58,7 +58,7 @@ yabai -m config window_gap                   5
 
 # one can make this smarter by querying the spaces that belong to a display
 # https://github.com/koekeishiya/yabai/discussions/959#discussioncomment-1084130
-yabai -m config --space 11 top_padding      20
+yabai -m config --space 11 top_padding      30
 yabai -m config --space 12 top_padding      20
 yabai -m config --space 13 top_padding      20
 yabai -m config --space 14 top_padding      20
