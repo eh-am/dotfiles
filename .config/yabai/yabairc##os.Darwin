@@ -28,7 +28,8 @@ function setup_space {
 # global settings
 yabai -m config mouse_follows_focus          off
 # when using two monitors it's useful to just move it
-yabai -m config focus_follows_mouse          autofocus
+#yabai -m config focus_follows_mouse          autofocus
+yabai -m config focus_follows_mouse          off
 yabai -m config window_origin_display        default
 yabai -m config window_placement             second_child
 #yabai -m config window_topmost               off
@@ -51,9 +52,22 @@ yabai -m config mouse_drop_action            swap
 yabai -m config layout                       bsp
 yabai -m config top_padding                  10
 yabai -m config bottom_padding               10
-yabai -m config left_padding                 0
+yabai -m config left_padding                 1
 yabai -m config right_padding                5
 yabai -m config window_gap                   5
+
+# one can make this smarter by querying the spaces that belong to a display
+# https://github.com/koekeishiya/yabai/discussions/959#discussioncomment-1084130
+yabai -m config --space 11 top_padding      20
+yabai -m config --space 12 top_padding      20
+yabai -m config --space 13 top_padding      20
+yabai -m config --space 14 top_padding      20
+yabai -m config --space 15 top_padding      20
+yabai -m config --space 11 bottom_padding      0
+yabai -m config --space 12 bottom_padding      0
+yabai -m config --space 13 bottom_padding      0
+yabai -m config --space 14 bottom_padding      0
+yabai -m config --space 15 bottom_padding      0
 
 # modify window shadows (default: on, options: on, off, float)
 # example: show shadows only for floating windows
@@ -104,3 +118,4 @@ yabai -m rule --add app="reMarkable" role="AXWindow" subrole="AXDialog" manage=o
 
 # leave blender preferences as a floating window
 yabai -m rule --add app="Blender" role="AXWindow" title="Blender Preferences" manage=off
+yabai -m rule --add app="Blender" role="AXWindow" title="Blender File View" manage=off

@@ -4,7 +4,7 @@
   "tsserver.formatOnType": false,
   "tsserver.npm": "/usr/bin/npm",
   "typescript.preferences.importModuleSpecifier": "non-relative",
-  "coc.preferences.formatOnSaveFiletypes": ["javascript", "javascriptreact", "typescript", "typescriptreact", "go"],
+  "coc.preferences.formatOnSaveFiletypes": ["javascript", "javascriptreact", "typescript", "typescriptreact", "go", "ruby"],
   "languageserver": {
     "bash": {
       "command": "bash-language-server",
@@ -35,5 +35,11 @@
   },
   "python": {
     "path": "python3"
-  }
+  },
+
+  "solargraph.docs": "https://github.com/neoclide/coc-solargraph/issues/3",
+  "solargraph.diagnostics": true,
+  "solargraph.autoformat": true,
+  "solargraph.formatting": true,
+  "solargraph.hover": true
 }

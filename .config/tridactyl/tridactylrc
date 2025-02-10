@@ -58,7 +58,8 @@ bind gd tabdetach
 bind / fillcmdline find
 bind n findnext 1
 bind N findnext -1
-bind <space> nohlsearch
+# not a good idea since it will stop checkboxes from working
+#bind <space> nohlsearch
 
 " custom by me
 " open current url in hypothesis

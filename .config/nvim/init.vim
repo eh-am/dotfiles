@@ -16,7 +16,8 @@ let g:coc_global_extensions = [
 \ 'coc-sh',
 \ 'coc-deno',
 \ 'coc-lua',
-\ 'coc-clangd'
+\ 'coc-clangd',
+\ 'coc-solargraph'
 \ ]
 
 Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': { -> coc#util#install() }}
@@ -37,7 +38,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
 " Vimwiki and friends
-Plug 'vimwiki/vimwiki', { 'branch': 'dev' }
+"Plug 'vimwiki/vimwiki', { 'branch': 'dev' }
 " Plug 'tools-life/taskwiki'
 "Plug 'eh-am/taskwiki', { 'branch': 'call-TaskSearch-when-hitting-return' }
 Plug 'mattn/calendar-vim'

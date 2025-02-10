@@ -240,3 +240,15 @@ brew "nmap"
 
 
 cask "blender"
+
+brew "samba"
+
+# to be able to use 'pdfunite'
+brew "poppler"
+
+cask "figma"
+
+cask "chromium", args: { no_quarantine: true }
+
+# to create fonts, use case: kanji app
+cask "fontforge"

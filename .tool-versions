@@ -1,6 +1,7 @@
 nodejs 16.16.0
-golang 1.22.1
+golang 1.23.2
 awscli 2.7.8
 jq 1.6
 helm 3.9.3
 rust 1.63.0
+ruby 3.3.5

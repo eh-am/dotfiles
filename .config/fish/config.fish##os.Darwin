@@ -3,7 +3,9 @@ if status is-interactive
 end
 
 
-source /opt/homebrew/opt/asdf/libexec/asdf.fish
+#source /opt/homebrew/opt/asdf/libexec/asdf.fish
+source /opt/homebrew/
+source /opt/homebrew/opt/asdf/share/fish/vendor_completions.d/asdf.fish
 
 direnv hook fish | source
 
