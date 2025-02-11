@@ -58,16 +58,8 @@ yabai -m config window_gap                   5
 
 # one can make this smarter by querying the spaces that belong to a display
 # https://github.com/koekeishiya/yabai/discussions/959#discussioncomment-1084130
-yabai -m config --space 11 top_padding      30
-yabai -m config --space 12 top_padding      20
-yabai -m config --space 13 top_padding      20
-yabai -m config --space 14 top_padding      20
-yabai -m config --space 15 top_padding      20
-yabai -m config --space 11 bottom_padding      0
-yabai -m config --space 12 bottom_padding      0
-yabai -m config --space 13 bottom_padding      0
-yabai -m config --space 14 bottom_padding      0
-yabai -m config --space 15 bottom_padding      0
+yabai -m signal --add event=display_added action="~/.config/yabai/external_display.sh"
+[ "$(yabai -m query --displays | jq 'length')" -gt 1 ] && ~/.config/yabai/external_display.sh
 
 # modify window shadows (default: on, options: on, off, float)
 # example: show shadows only for floating windows
@@ -80,6 +72,7 @@ yabai -m config window_shadow float
 #yabai -m config normal_window_opacity 0.90
 
 yabai -m rule --add app="^System Preferences$" manage=off
+yabai -m rule --add app="^System Settings$" manage=off
 yabai -m rule --add app="^darktable$" manage=off
 yabai -m rule --add app="^app$" manage=off
 
@@ -98,8 +91,9 @@ yabai -m rule --add app="^reMarkable$" manage=on
 # otherwise yabai will depend on spacebar
 yabai -m config external_bar all:20:20
 
-yabai -m signal --add event=window_created action="~/.config/yabai/refresh.sh"
-yabai -m signal --add event=window_destroyed action="~/.config/yabai/refresh.sh"
+# TODO: this doesn't work properly with the external display padding
+#yabai -m signal --add event=window_created action="~/.config/yabai/refresh.sh"
+#yabai -m signal --add event=window_destroyed action="~/.config/yabai/refresh.sh"
 
 setup_space 9 music
 setup_space 10 notes
