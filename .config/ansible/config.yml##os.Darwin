@@ -51,7 +51,7 @@
     - ansible.builtin.command: strfile ~/projects/picard-tips-fortune/PicardTips.txt
       when: picard_tips.changed
 
-    - name: Tmux Plugin Manage"
+    - name: Tmux Plugin Manager"
       git:
         repo: https://github.com/tmux-plugins/tpm.git
         dest: "~/.tmux/plugins/tpm"
@@ -66,6 +66,12 @@
       ansible.builtin.shell: |
         defaults write com.apple.dock show-recents -bool no
         defaults write com.apple.dock recent-apps -array # intentionally empty
+
+
+    # https://apple.stackexchange.com/questions/332769/macos-disable-popup-showing-accented-characters-when-holding-down-a-key
+    - name: remove accented characters popup
+      ansible.builtin.shell: |
+	defaults write -g ApplePressAndHoldEnabled -bool false
 
     # https://github.com/tmux/tmux/issues/2262
     - name: fix tmux256 color term
@@ -86,26 +92,15 @@
         rm tmux-256color
         exit 0
 
-    # stackline setup
-    - name: hammerspoon default dir
-      ansible.builtin.shell: |
-        defaults write org.hammerspoon.Hammerspoon MJConfigFile "~/.config/hammerspoon/init.lua"
-    - name:
-      ansible.builtin.git:
-        repo: https://github.com/lkubb/stackline.git
-        dest: ~/.config/hammerspoon/stackline
-        version: d7a7b1d161207f69985ebc5add4988433a12b84a
-
-    # required for taskwiki
-    - ansible.builtin.pip:
-        name: pynvim
-        executable: pip3
-    - ansible.builtin.pip:
-        name: tasklib
-        executable: pip3
-    - ansible.builtin.pip:
-        name: six
-        executable: pip3
+#    # stackline setup
+#    - name: hammerspoon default dir
+#      ansible.builtin.shell: |
+#        defaults write org.hammerspoon.Hammerspoon MJConfigFile "~/.config/hammerspoon/init.lua"
+#    - name:
+#      ansible.builtin.git:
+#        repo: https://github.com/lkubb/stackline.git
+#        dest: ~/.config/hammerspoon/stackline
+#        version: d7a7b1d161207f69985ebc5add4988433a12b84a
 
     # https://apple.stackexchange.com/a/82084
     #

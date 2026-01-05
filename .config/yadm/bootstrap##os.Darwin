@@ -15,7 +15,20 @@ fi
 
 
 
+yabai --start-service
+skhd --start-service
+
+
+
+# idempotently add
+# launchctl bootout gui/$(id -u) ~/Library/LaunchAgents/com.ldaws.CapslockBackspace.plist || true
+# launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.ldaws.CapslockBackspace.plist
+
+launchctl bootout gui/$(id -u) ~/Library/LaunchAgents/com.eham.Mac.plist || true
+launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.eham.Mac.plist
 
 # Disable sound effects on boot
 #sudo nvram StartupMute=%01
-ansible-playbook -v "$HOME/.config/ansible/config.yml"
+#ansible-playbook -v "$HOME/.config/ansible/config.yml"
+
+

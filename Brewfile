@@ -199,7 +199,7 @@ cask "duplicati"
 cask "vagrant"
 brew "qemu"
 # https://github.com/hashicorp/vagrant/issues/10644#issuecomment-1690022359
-cask "vagrant-vmware-utility"
+#cask "vagrant-vmware-utility"
 
 # steam deck
 # didn't work
