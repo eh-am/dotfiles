@@ -1,7 +1,7 @@
-brew "yabai"
+brew "asmvik/formulae/yabai"
 brew "jq"
-brew "koekeishiya/formulae/skhd"
-brew "spacebar"
+brew "asmvik/formulae/skhd"
+brew "cmacrae/formulae/spacebar"
 tap "homebrew/cask-fonts"
 cask "homebrew/cask-fonts/font-fontawesome"
 
@@ -82,7 +82,6 @@ brew "bash-language-server"
 
 brew "tldr"
 brew "yt-dlp"
-brew "youtube-dl"
 
 cask "godot"
 cask "spotify"
@@ -252,3 +251,7 @@ cask "chromium", args: { no_quarantine: true }
 
 # to create fonts, use case: kanji app
 cask "fontforge"
+
+cask "plex"
+
+brew "yadm"
