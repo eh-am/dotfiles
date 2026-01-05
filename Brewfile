@@ -1,12 +1,8 @@
 brew "asmvik/formulae/yabai"
 brew "jq"
 brew "asmvik/formulae/skhd"
-brew "cmacrae/formulae/spacebar"
 tap "homebrew/cask-fonts"
 cask "homebrew/cask-fonts/font-fontawesome"
-
-# stackline requires hammerspoon
-cask "hammerspoon"
 
 brew "fish"
 brew "tmux"
@@ -139,17 +135,10 @@ brew "nicotine-plus"
 
 brew "kind"
 
-cask "syncthing"
-
-# https://gist.github.com/7468696e6b/ec8fa5d6cdb4e80633b9df95869b70c0
-tap "kde-mac/kde", "https://invent.kde.org/packaging/homebrew-kde.git"
 #brew "okular"
 cask "gimp"
 
 brew "wget"
-
-# photos
-cask "darktable"
 
 brew "nginx"
 
@@ -192,12 +181,12 @@ cask "sioyek"
 brew "aichat"
 
 # backup
-cask "duplicati"
+#cask "duplicati"
 
 # doesn't work with m1, need to install manually
 #cask "virtualbox"
-cask "vagrant"
-brew "qemu"
+#cask "vagrant"
+#brew "qemu"
 # https://github.com/hashicorp/vagrant/issues/10644#issuecomment-1690022359
 #cask "vagrant-vmware-utility"
 

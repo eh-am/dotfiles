@@ -8,39 +8,6 @@
   vars:
     ansible_python_interpreter: /usr/bin/python3
   tasks:
-    - name: "osx_defaults: Decrease key repeat initial delay"
-      community.general.osx_defaults:
-        domain: NSGlobalDomain
-        key: InitialKeyRepeat
-        type: int
-        value: 14
-        state: present
-
-    - name: "osx_defaults: Decrease delay between key repeats"
-      community.general.osx_defaults:
-        domain: NSGlobalDomain
-        key: KeyRepeat
-        type: int
-        value: 2
-        state: present
-
-    ### https://apple.stackexchange.com/questions/59556/is-there-a-way-to-completely-disable-dock
-    - name: "osx_defaults: Autohide dock"
-      community.general.osx_defaults:
-        domain: com.apple.dock
-        key: autohide
-        type: bool
-        value: true
-        state: present
-    - name: "osx_defaults: Autohide menu bar"
-      community.general.osx_defaults:
-        domain: com.apple.dock
-        key: mru-spaces
-        type: bool
-        value: false
-        state: present
-
-
     - name: "Setup fortune"
       git:
         repo: https://github.com/eh-am/picard-tips-fortune.git
@@ -68,11 +35,6 @@
         defaults write com.apple.dock recent-apps -array # intentionally empty
 
 
-    # https://apple.stackexchange.com/questions/332769/macos-disable-popup-showing-accented-characters-when-holding-down-a-key
-    - name: remove accented characters popup
-      ansible.builtin.shell: |
-	defaults write -g ApplePressAndHoldEnabled -bool false
-
     # https://github.com/tmux/tmux/issues/2262
     - name: fix tmux256 color term
       ansible.builtin.shell: |
@@ -91,29 +53,3 @@
         fi
         rm tmux-256color
         exit 0
-
-#    # stackline setup
-#    - name: hammerspoon default dir
-#      ansible.builtin.shell: |
-#        defaults write org.hammerspoon.Hammerspoon MJConfigFile "~/.config/hammerspoon/init.lua"
-#    - name:
-#      ansible.builtin.git:
-#        repo: https://github.com/lkubb/stackline.git
-#        dest: ~/.config/hammerspoon/stackline
-#        version: d7a7b1d161207f69985ebc5add4988433a12b84a
-
-    # https://apple.stackexchange.com/a/82084
-    #
-    - name: disable dock
-      ansible.builtin.shell: |
-        defaults write com.apple.dock autohide-delay -float 1000;
-
-    - name: clone powerline fonts
-      ansible.builtin.git:
-        repo: https://github.com/powerline/fonts.git
-        dest: ~/projects/powerline-fonts
-        version: e80e3eba9091dac0655a0a77472e10f53e754bb0
-    - name: install powerline fonts
-      ansible.builtin.shell: |
-        ~/projects/powerline-fonts/install.sh
-        
