@@ -113,3 +113,6 @@ yabai -m rule --add app="reMarkable" role="AXWindow" subrole="AXDialog" manage=o
 # leave blender preferences as a floating window
 yabai -m rule --add app="Blender" role="AXWindow" title="Blender Preferences" manage=off
 yabai -m rule --add app="Blender" role="AXWindow" title="Blender File View" manage=off
+
+# Manage zoom
+yabai -m rule --add app="zoom.us" manage=on

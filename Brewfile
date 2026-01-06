@@ -1,8 +1,17 @@
-brew "asmvik/formulae/yabai"
 brew "jq"
 brew "asmvik/formulae/skhd"
-tap "homebrew/cask-fonts"
-cask "homebrew/cask-fonts/font-fontawesome"
+#tap "homebrew/cask-fonts"
+#cask "homebrew/cask-fonts/font-fontawesome"
+
+##### ricing #####
+brew "asmvik/formulae/yabai"
+
+# sketchybar
+tap "FelixKratz/formulae"
+brew "sketchybar"
+cask "font-hack-nerd-font"
+
+##### /ricing #####
 
 brew "fish"
 brew "tmux"
@@ -25,8 +34,8 @@ brew "direnv"
 brew "coreutils"
 
 # fonts
-tap "homebrew/cask-fonts"
-cask "font-jetbrains-mono"
+#tap "homebrew/cask-fonts"
+#cask "font-jetbrains-mono"
 
 cask "slack"
 
@@ -63,14 +72,14 @@ cask "bitwarden"
 
 cask "transmission"
 
-cask "docker"
+cask "docker-desktop"
 tap "aws/tap"
 brew "aws-sam-cli"
 
 brew "ripgrep"
 cask "zoom"
 
-cask "wireshark"
+cask "wireshark-app"
 brew "hey"
 
 
@@ -96,8 +105,6 @@ brew "ffmpeg@6"
 brew "ffmpeg"
 brew "libtiff" # needed when merging audio + video from reddit
 
-
-brew "syncthing"
 
 # taskwarrior
 brew "task"
